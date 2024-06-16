@@ -7,13 +7,13 @@
     --gris: #757575;
 }
 
-/* 
+/* Globales
    Establece la fuente base a 62.5% para facilitar el uso de rem.
    También establece el modelo de caja en "border-box" para el elemento html.
 */
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Buena practica Box Model */
 }
 
 /* 
@@ -25,11 +25,34 @@ html {
   box-sizing: inherit;
 }
 
-
 body {
     font-size: 16px; /* 1rem = 10px */
     font-family: 'krub', sans-serif;
 }
+.contenedor {
+    max-width: 120rem; /* 1200px */
+    margin: 0 auto;
+}
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+/* Tipografia */
 h1 {
     font-size: 3.8rem;
 }
@@ -44,35 +67,12 @@ h1,h2,h3 {
     text-align: center;
 }
 
+/* Titulos */
 .titulo span {
     font-size: 2rem;
 }
 
-.contenedor {
-    max-width: 120rem; /* 1200px */
-    margin: 0 auto;
-}
-
-.boton {
-    background-color: var(--secundario);
-    color: var(--blanco);
-    padding: 1rem 3rem;
-    margin-top: 3rem;
-    font-size: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: .5rem;
-    width: 90%;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .boton {
-        width: auto;
-    }
-}
-
+/* Navegacion principal */
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -105,7 +105,8 @@ h1,h2,h3 {
     color: var(--oscuro);
 }
 
-/* Establecemos el contenedor padre con position: relative.
+/* Hero
+   Establecemos el contenedor padre con position: relative.
    Esto asegura que los elementos hijos con position: absolute
    se posicionen de manera relativa a este contenedor. */
 .hero {
@@ -135,7 +136,7 @@ h1,h2,h3 {
 .contenido-hero p{
     color: var(--blanco);
 }
-.ubicacion {
+.contenido-hero .ubicacion {
     display: flex;
     align-items: flex-end;
 }
