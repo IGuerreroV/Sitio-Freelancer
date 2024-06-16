@@ -7,10 +7,24 @@
     --gris: #757575;
 }
 
-/* Etiquetas HTML Y BODY para trabajar con rem */
+/* 
+   Establece la fuente base a 62.5% para facilitar el uso de rem.
+   También establece el modelo de caja en "border-box" para el elemento html.
+*/
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
 }
+
+/* 
+   Aplica el modelo de caja "border-box" a todos los elementos,
+   incluidos ::before y ::after.
+   Hereda el box-sizing del elemento html.
+*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 
 body {
     font-size: 16px; /* 1rem = 10px */
@@ -67,4 +81,6 @@ body {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover; /* Toma todo el tamaño */
+    height: 410px;
+    padding: 20px;
 }
