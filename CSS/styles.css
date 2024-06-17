@@ -159,6 +159,7 @@ h1,h2,h3 {
         grid-template-columns: repeat(3, 1fr); /* Lo divide en 3 fracciones */
     
         /* grid :200px 800px / 300px 300px; Este es igual al codigo arriba tomado el columns y rows */
+        column-gap: 1rem;
     }
 }
 
