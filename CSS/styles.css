@@ -47,11 +47,15 @@ body {
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
 }
 @media (min-width: 768px) {
     .boton {
         width: auto;
     }
+}
+.boton:hover {
+    cursor: pointer;
 }
 
 /* Sombra generada con CSS matic */
@@ -80,6 +84,22 @@ h1,h2,h3 {
 /* Titulos */
 .titulo span {
     font-size: 2rem;
+}
+
+/** Utilidades **/
+.w-sm-100 {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+.flex {
+    display: flex;
+}
+.alinear-derecha {
+    justify-content: flex-end;
 }
 
 /* Navegacion principal */
@@ -204,5 +224,25 @@ h1,h2,h3 {
     font-weight: 700;
     margin-bottom: 2rem;
     color: var(--primario)
+}
+
+.contenedor-campos {
+
+}
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
 }
 
